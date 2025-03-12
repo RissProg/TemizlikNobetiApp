@@ -21,8 +21,13 @@ namespace TemizlikNobetiApp
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             Sinif yeni = new();
+            //Benzersiz bir kimlik numarası oluştur
+            yeni.Id = Guid.NewGuid().ToString();
+
             yeni.Ad = txtSinifEkle.Text;
+
             KayitYoneticisi.Siniflar.Add(yeni);
+
             KayitYoneticisi.Kaydet();
             DialogResult = DialogResult.OK;//Diyalog Formunu Kapatır
             //Form kapatılırken geriye cevap "OK" döner

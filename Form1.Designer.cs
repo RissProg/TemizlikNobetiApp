@@ -31,14 +31,14 @@
             cbSinif = new ComboBox();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
-            button1 = new Button();
+            btnOgrenciEkle = new Button();
             label1 = new Label();
             btnYeniSinif = new Button();
             lbOgrenciler = new ListBox();
             panel2 = new Panel();
             pictureBox2 = new PictureBox();
             panel3 = new Panel();
-            lbTemizlikYapacaklar = new ListBox();
+            lbSecilenler = new ListBox();
             btnOnayla = new Button();
             label2 = new Label();
             btnAta = new Button();
@@ -57,11 +57,12 @@
             cbSinif.Name = "cbSinif";
             cbSinif.Size = new Size(194, 25);
             cbSinif.TabIndex = 0;
+            cbSinif.SelectedValueChanged += cbSinif_SelectedValueChanged;
             // 
             // panel1
             // 
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnOgrenciEkle);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnYeniSinif);
             panel1.Controls.Add(lbOgrenciler);
@@ -81,16 +82,18 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnOgrenciEkle
             // 
-            button1.BackColor = Color.FromArgb(255, 192, 128);
-            button1.Font = new Font("Verdana", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            button1.Location = new Point(101, 378);
-            button1.Name = "button1";
-            button1.Size = new Size(96, 45);
-            button1.TabIndex = 4;
-            button1.Text = "Öğrenci Ekle";
-            button1.UseVisualStyleBackColor = false;
+            btnOgrenciEkle.BackColor = Color.FromArgb(255, 192, 128);
+            btnOgrenciEkle.Cursor = Cursors.Hand;
+            btnOgrenciEkle.Font = new Font("Verdana", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnOgrenciEkle.Location = new Point(101, 378);
+            btnOgrenciEkle.Name = "btnOgrenciEkle";
+            btnOgrenciEkle.Size = new Size(96, 45);
+            btnOgrenciEkle.TabIndex = 4;
+            btnOgrenciEkle.Text = "Öğrenci Ekle";
+            btnOgrenciEkle.UseVisualStyleBackColor = false;
+            btnOgrenciEkle.Click += btnOgrenciEkle_Click;
             // 
             // label1
             // 
@@ -105,6 +108,7 @@
             // btnYeniSinif
             // 
             btnYeniSinif.BackColor = Color.FromArgb(255, 192, 128);
+            btnYeniSinif.Cursor = Cursors.Hand;
             btnYeniSinif.Font = new Font("Verdana", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnYeniSinif.Location = new Point(0, 378);
             btnYeniSinif.Name = "btnYeniSinif";
@@ -148,7 +152,7 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(192, 255, 192);
-            panel3.Controls.Add(lbTemizlikYapacaklar);
+            panel3.Controls.Add(lbSecilenler);
             panel3.Controls.Add(btnOnayla);
             panel3.Controls.Add(label2);
             panel3.Location = new Point(18, 100);
@@ -156,18 +160,19 @@
             panel3.Size = new Size(460, 278);
             panel3.TabIndex = 1;
             // 
-            // lbTemizlikYapacaklar
+            // lbSecilenler
             // 
-            lbTemizlikYapacaklar.FormattingEnabled = true;
-            lbTemizlikYapacaklar.ItemHeight = 17;
-            lbTemizlikYapacaklar.Location = new Point(60, 50);
-            lbTemizlikYapacaklar.Name = "lbTemizlikYapacaklar";
-            lbTemizlikYapacaklar.Size = new Size(330, 157);
-            lbTemizlikYapacaklar.TabIndex = 3;
+            lbSecilenler.FormattingEnabled = true;
+            lbSecilenler.ItemHeight = 17;
+            lbSecilenler.Location = new Point(59, 50);
+            lbSecilenler.Name = "lbSecilenler";
+            lbSecilenler.Size = new Size(331, 157);
+            lbSecilenler.TabIndex = 3;
             // 
             // btnOnayla
             // 
             btnOnayla.BackColor = Color.FromArgb(255, 192, 192);
+            btnOnayla.Cursor = Cursors.Hand;
             btnOnayla.Font = new Font("Verdana", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnOnayla.ImageAlign = ContentAlignment.BottomCenter;
             btnOnayla.Location = new Point(235, 215);
@@ -191,24 +196,28 @@
             // btnAta
             // 
             btnAta.BackColor = Color.FromArgb(255, 192, 192);
+            btnAta.Cursor = Cursors.Hand;
             btnAta.Font = new Font("Verdana", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnAta.Location = new Point(335, 13);
             btnAta.Name = "btnAta";
             btnAta.Size = new Size(143, 48);
             btnAta.TabIndex = 0;
-            btnAta.Text = "Ata";
+            btnAta.Text = "Ata -->";
             btnAta.UseVisualStyleBackColor = false;
+            btnAta.Click += btnAta_Click;
             // 
             // btnCikar
             // 
             btnCikar.BackColor = Color.FromArgb(255, 224, 192);
+            btnCikar.Cursor = Cursors.Hand;
             btnCikar.Font = new Font("Verdana", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnCikar.Location = new Point(18, 13);
             btnCikar.Name = "btnCikar";
             btnCikar.Size = new Size(143, 48);
             btnCikar.TabIndex = 0;
-            btnCikar.Text = "Çıkar";
+            btnCikar.Text = "<-- Çıkar";
             btnCikar.UseVisualStyleBackColor = false;
+            btnCikar.Click += btnCikar_Click;
             // 
             // Form1
             // 
@@ -243,10 +252,10 @@
         private Button btnAta;
         private Button btnCikar;
         private Panel panel3;
-        private ListBox lbTemizlikYapacaklar;
+        private ListBox lbSecilenler;
         private Button btnOnayla;
         private Label label2;
-        private Button button1;
+        private Button btnOgrenciEkle;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
     }

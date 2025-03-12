@@ -81,7 +81,10 @@
             Controls.Add(lblSinifAdi);
             Controls.Add(txtSinifEkle);
             Controls.Add(label2);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FrmYeniSinif";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmYeniSinif";
             ResumeLayout(false);
             PerformLayout();

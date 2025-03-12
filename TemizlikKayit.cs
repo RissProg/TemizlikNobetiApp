@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace TemizlikNobetiApp
 {
-    public class Sinif
+    public class TemizlikKayit
     {
         public string Id { get; set; }
-        public string Ad { get; set; }
-        
+        public string OgrenciId { get; set; }
+        public DateTime Tarih { get; set; }
+
     }
 }
