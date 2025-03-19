@@ -64,9 +64,9 @@ namespace TemizlikNobetiApp
             }
 
 
-            if (File.Exists("TemizlikKayitleri.txt"))
+            if (File.Exists("TemizlikKayitlari.txt"))
             {
-                string metin = File.ReadAllText("TemizlikKayitleri.txt");
+                string metin = File.ReadAllText("TemizlikKayitlari.txt");
 
                 var liste = JsonSerializer.Deserialize<List<TemizlikKayit>>(metin);
                 TemizlikKayitlari = new BindingList<TemizlikKayit>(liste);
