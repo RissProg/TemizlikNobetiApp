@@ -204,6 +204,7 @@
             // btnSec
             // 
             btnSec.BackColor = Color.FromArgb(255, 192, 192);
+            btnSec.Cursor = Cursors.Hand;
             btnSec.Font = new Font("Verdana", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnSec.ForeColor = Color.FromArgb(0, 192, 0);
             btnSec.Location = new Point(56, 188);
