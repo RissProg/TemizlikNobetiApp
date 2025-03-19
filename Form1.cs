@@ -265,7 +265,7 @@ namespace TemizlikNobetiApp
                 }
 
 
-                
+
                 KayitYoneticisi.Siniflar.Remove(sinif);
 
                 Filtrele();

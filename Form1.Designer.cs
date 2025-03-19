@@ -64,7 +64,7 @@
             cbSinif.FormattingEnabled = true;
             cbSinif.Location = new Point(3, 108);
             cbSinif.Name = "cbSinif";
-            cbSinif.Size = new Size(194, 25);
+            cbSinif.Size = new Size(207, 25);
             cbSinif.TabIndex = 0;
             cbSinif.SelectedValueChanged += cbSinif_SelectedValueChanged;
             // 
@@ -80,7 +80,7 @@
             panel1.Controls.Add(cbSinif);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 426);
+            panel1.Size = new Size(215, 426);
             panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -88,7 +88,7 @@
             pictureBox1.Image = Properties.Resources.cleaning;
             pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(194, 76);
+            pictureBox1.Size = new Size(208, 76);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
@@ -98,9 +98,9 @@
             btnOgrenciSil.BackColor = Color.FromArgb(255, 192, 128);
             btnOgrenciSil.Cursor = Cursors.Hand;
             btnOgrenciSil.Font = new Font("Verdana", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnOgrenciSil.Location = new Point(101, 330);
+            btnOgrenciSil.Location = new Point(115, 332);
             btnOgrenciSil.Name = "btnOgrenciSil";
-            btnOgrenciSil.Size = new Size(96, 45);
+            btnOgrenciSil.Size = new Size(95, 45);
             btnOgrenciSil.TabIndex = 4;
             btnOgrenciSil.Text = "Öğrenci Sil";
             btnOgrenciSil.UseVisualStyleBackColor = false;
@@ -111,9 +111,9 @@
             btnOgrenciEkle.BackColor = Color.FromArgb(255, 192, 128);
             btnOgrenciEkle.Cursor = Cursors.Hand;
             btnOgrenciEkle.Font = new Font("Verdana", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnOgrenciEkle.Location = new Point(101, 378);
+            btnOgrenciEkle.Location = new Point(5, 332);
             btnOgrenciEkle.Name = "btnOgrenciEkle";
-            btnOgrenciEkle.Size = new Size(96, 45);
+            btnOgrenciEkle.Size = new Size(95, 45);
             btnOgrenciEkle.TabIndex = 4;
             btnOgrenciEkle.Text = "Öğrenci Ekle";
             btnOgrenciEkle.UseVisualStyleBackColor = false;
@@ -134,7 +134,7 @@
             btnSinifSil.BackColor = Color.FromArgb(255, 192, 128);
             btnSinifSil.Cursor = Cursors.Hand;
             btnSinifSil.Font = new Font("Verdana", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnSinifSil.Location = new Point(0, 330);
+            btnSinifSil.Location = new Point(115, 378);
             btnSinifSil.Name = "btnSinifSil";
             btnSinifSil.Size = new Size(95, 45);
             btnSinifSil.TabIndex = 2;
@@ -147,7 +147,7 @@
             btnYeniSinif.BackColor = Color.FromArgb(255, 192, 128);
             btnYeniSinif.Cursor = Cursors.Hand;
             btnYeniSinif.Font = new Font("Verdana", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            btnYeniSinif.Location = new Point(0, 378);
+            btnYeniSinif.Location = new Point(5, 378);
             btnYeniSinif.Name = "btnYeniSinif";
             btnYeniSinif.Size = new Size(95, 45);
             btnYeniSinif.TabIndex = 2;
@@ -162,7 +162,7 @@
             lbOgrenciler.ItemHeight = 16;
             lbOgrenciler.Location = new Point(3, 144);
             lbOgrenciler.Name = "lbOgrenciler";
-            lbOgrenciler.Size = new Size(194, 180);
+            lbOgrenciler.Size = new Size(207, 180);
             lbOgrenciler.TabIndex = 1;
             // 
             // panel2
@@ -179,10 +179,11 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.BackColor = Color.Transparent;
             pictureBox2.Image = Properties.Resources.broom;
-            pictureBox2.Location = new Point(167, 13);
+            pictureBox2.Location = new Point(169, 13);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(162, 84);
+            pictureBox2.Size = new Size(159, 84);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
@@ -195,7 +196,7 @@
             panel3.Controls.Add(lbSecilenler);
             panel3.Controls.Add(btnOnayla);
             panel3.Controls.Add(label2);
-            panel3.Location = new Point(18, 100);
+            panel3.Location = new Point(20, 100);
             panel3.Name = "panel3";
             panel3.Size = new Size(460, 278);
             panel3.TabIndex = 1;
@@ -266,7 +267,7 @@
             btnAta.Cursor = Cursors.Hand;
             btnAta.Font = new Font("Verdana", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnAta.ForeColor = Color.FromArgb(0, 192, 0);
-            btnAta.Location = new Point(335, 13);
+            btnAta.Location = new Point(334, 13);
             btnAta.Name = "btnAta";
             btnAta.Size = new Size(143, 48);
             btnAta.TabIndex = 0;
@@ -280,7 +281,7 @@
             btnCikar.Cursor = Cursors.Hand;
             btnCikar.Font = new Font("Verdana", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnCikar.ForeColor = Color.Red;
-            btnCikar.Location = new Point(18, 13);
+            btnCikar.Location = new Point(20, 13);
             btnCikar.Name = "btnCikar";
             btnCikar.Size = new Size(143, 48);
             btnCikar.TabIndex = 0;
